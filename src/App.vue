@@ -18,10 +18,11 @@
       </v-row>
       </v-form>
     </v-app-bar>
-
+<tbody>
     <v-main>
       <router-view></router-view>
-    </v-main>    
+    </v-main>
+  </tbody>    
     
   </v-app>
 </template>
@@ -29,7 +30,6 @@
 <script>
 import HomePage from './views/HomePage.vue'
 import Materias from './views/Materias.vue';
-import loop from './views/loop.vue';
 
   export default {
     name: 'App',
@@ -37,7 +37,6 @@ import loop from './views/loop.vue';
     components: {
     HomePage,
     Materias,
-    loop
 },
 
     data() {
