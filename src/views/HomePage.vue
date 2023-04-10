@@ -1,74 +1,54 @@
 <template>
-    <v-container fluid>
-        <center>
-       <h1>Información del alumno</h1> 
-        <v-img class="student" src="@/assets/juan_escutia.jpg" max-height="200" max-width="200"></v-img>
-        <v-container>
-            <v-row justify="center" class="pa-2 ma-2">
-                <v-col align-self="start">
-                    <h2>Nombre Completo</h2>
-                    <p>Juan Escutia</p>
-                </v-col>
-                <v-col align-self="start" class="pa-2 ma-2">
-                    <h2>Matrícula</h2>
-                    <p>A01361234</p>
-                </v-col>
-            </v-row>
-            <v-row justify="center" class="pa-2 ma-2">
-                <v-col align-self="start">
-                    <h2>Correo Institucional</h2>
-                    <p>A01361234@tec.mx</p>
-                </v-col>
-                <v-col align-self="start">
-                   <h2>Carrera</h2>
-                   <p>ISC</p> 
-                </v-col>
-            </v-row>
-            <v-row justify="center" class="pa-2 ma-2">
-               <v-col align-self="start">
-                <h2>Correo Personal</h2>
-                <p>murioporlapatria@gmail.com</p>
-               </v-col> 
-               <v-col></v-col>
-            </v-row>
-        </v-container>
-    </center>
-</v-container>    
-  </template>
-    
+  <div class="header" style="margin-top: 100px;">
+    <h1 style="color: #384FFE">INICIO DE SESIÓN</h1>
+    <form>
+      <input id="email" type="email" placeholder="correo institucional" class="login-input" style="border: 2px solid #384FFE; border-radius: 10px; color: black; margin-bottom: 20px; padding: 10px; width: 300px;">
+      <input id="password" type="password" placeholder="contraseña" class="login-input" style="border: 2px solid #384FFE; border-radius: 10px; color: black; margin-bottom: 20px; padding: 10px; width: 300px;">
+      <button type="submit" class="login-button">Iniciar sesión</button>
+    </form>
+  </div>
+</template>
 
 <script>
-
-    export default{
-            name: 'HomePage',
-            data(){
-                    return{
-                        
-                    }
-                }
-    }
-
+export default {
+  name: 'HomePage',
+}
 </script>
-  
+
 <style>
-  .student{
-    border-radius: 50%;
-  }
-  .data02{
-    justify-content: center;
-    text-align: center;
-  }
-
-  h1{
-    -webkit-text-fill-color: #384FFE;
-  }
-
-  h2{
-    -webkit-text-fill-color: #384FFE;
-  }
-
-  p{
-    -webkit-text-fill-color: #7B7C9D;
-    font-size: 1.5em;
-  }
-  </style>
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.login-input {
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  border: 2px solid #384FFE;
+  color: black;
+  margin-bottom: 20px;
+}
+.login-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #384FFE;
+  color: white;
+}
+.login-button:hover {
+  background-color: #263F96;
+}
+.login-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #AED6FF;
+}
+</style>
